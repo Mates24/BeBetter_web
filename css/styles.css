@@ -139,6 +139,9 @@ footer h4{
         grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
         row-gap: 10px;
     }
+    .grid-item p{
+        text-align: justify;
+    }
     .grid-item h2, .grid-item p{
         margin: 0;
     }
