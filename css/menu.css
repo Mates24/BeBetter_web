@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #fff;
+}
+
+/* dizajn scrollbaru */
+/* nastavenie šírky */
+::-webkit-scrollbar{
+    width: .6em;
+}
+/* nastavenie farby dráhy */
+::-webkit-scrollbar-track{
+    background-color: #000000;
+}
+/* nastavenie farby thumbu scrollbaru */
+::-webkit-scrollbar-thumb{
+    background: #fff;
+}
+/* nastavenie hoveru na thumb scrollbaru */
+::-webkit-scrollbar-thumb:hover {
+    background: #818180;
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav div#logo{
+    flex: 1;
+    padding: 5px 0 0 20px;
+    z-index: 2;
+}
+nav div#logo img{
+    max-width: 200px;
+}
+#logo-b{
+    display: none;
+}
+nav div.linky{
+    flex: 8;
+    position: relative;
+    height: 50px;
+    background-color: #000000;
+}
+nav div.linky::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 70px;
+    height: 50px;
+    transform: skew(-50deg);
+    background: #fff;
+    z-index: 1;
+}
+nav div.linky ul{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+    list-style: none;
+    gap: 45px;
+}
+ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+nav ul li.download{
+    padding: 0;
+}
+
+.button{
+    display: none;
+    position: relative;
+    height: 50px;
+    padding: 0 25px 0 60px;
+    background-color: #000;
+    z-index: 2;
+    transition: all 2s ease;
+}
+.button .hideondesktop{
+    cursor: pointer;
+    background: none;
+    border: none;
+    height: 50px;
+}
+.button::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -27px;
+    width: 50px;
+    height: 50px;
+    transform: skew(-30deg);
+    background: #fff;
+    z-index: 1;
+}
+.button .hideondesktop .palicka{
+    height: 3px;
+    width: 22px;
+    margin: 5px 0;
+    border-radius: 15px;
+    background-color: #fff;
+    transition: all 2s ease;
+}
+
+@media(max-width: 600px){
+    #menu{
+        position: relative;
+        z-index: 999;
+    }
+    nav div#logo{
+        padding: 5px 0 0 5px;
+    }
+    nav div.linky{
+        display: flex;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -150%;
+        right: 150%;
+        height: 100vh;
+        justify-content: center;
+        transition: all 1s ease;
+    }
+    nav div.linky ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.9em;
+        padding: 0;
+    }
+    nav div.linky::before{
+        display: none;
+    }
+    .button{
+        display: initial;
+    }
+}

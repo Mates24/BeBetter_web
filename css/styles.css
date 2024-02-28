@@ -1,0 +1,167 @@
+.banner{
+    position: relative;
+    height: calc(100vh - 50px);
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-text{
+    position: relative;
+    top: 50%;
+    left: 12.5%;
+    max-width: 1000px;
+    translate: 0 -50%;
+}
+.banner-text h1{
+    font-size: 60px;
+    margin: 0;
+}
+
+.ciele{
+    padding: 20px 200px;
+    color: #fff;
+    background-color: #000;
+}
+
+main section:nth-child(3){
+    margin: 20px 200px 0 200px;
+    color: #000;
+}
+.grid{
+    display: grid;
+    grid-template-areas:
+        "text1 fotka1"
+        "fotka2 text2"
+        "text3 fotka3";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 20px;
+}
+.grid-item{
+    display: flex;
+    align-items: center;
+}
+.grid-item1{
+    grid-area: text1;
+    gap: 20px;
+}
+.grid-item2{
+    grid-area: fotka1;
+    justify-content: end;
+}
+.grid-item3{
+    grid-area: fotka2;
+}
+.grid-item4{
+    grid-area: text2;
+    justify-content: end;
+    text-align: end;
+    gap: 20px;
+}
+.grid-item5{
+    grid-area: text3;
+    gap: 20px;
+}
+.grid-item6{
+    grid-area: fotka3;
+    justify-content: end;
+}
+aside{
+    height: 200px;
+    width: 10px;
+    background-color: #000;
+}
+.fotka1{
+    background-image: url(../images/vytrvalost.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 400px;
+}
+.fotka2{
+    background-image: url(../images/sila.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 400px;
+}
+.fotka3{
+    background-image: url(../images/dynamika.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 400px;
+}
+
+footer{
+    margin-top: 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+footer h4{
+    margin: 0;
+    padding: 5px 0;
+}
+
+@media(max-width: 600px){
+    .banner{
+        background-position-x: -42em;
+        z-index: -1;
+    }
+    .banner-text{
+        width: calc(100% - 4%);
+        top: 28%;
+        left: 4%;
+    }
+    .banner-text h1{
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    .ciele{
+        padding: 20px 60px;
+        text-align: center;
+    }
+
+    main section:nth-child(3){
+        margin: 20px 30px;
+    }
+    .grid{
+        grid-template-areas:
+            "fotka1"
+            "text1"
+            "fotka2"
+            "text2"
+            "fotka3"
+            "text3";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
+        row-gap: 10px;
+    }
+    .grid-item h2, .grid-item p{
+        margin: 0;
+    }
+    .grid-item p{
+        margin-bottom: 20px;
+    }
+    .grid-item:nth-child(5) p{
+        margin-bottom: 0;
+    }
+    .grid-item:nth-child(4){
+        text-align: end;
+    }
+    .grid-item2, .grid-item3, .grid-item6{
+        justify-content: center;
+    }
+    .fotka1, .fotka2, .fotka3{
+        max-width: calc(100vw - 62px);
+        max-height: 150px;
+    }
+    .grid br{
+        display: none;
+    }
+    aside{
+        display: none;
+    }
+}

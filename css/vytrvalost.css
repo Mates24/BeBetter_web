@@ -1,0 +1,110 @@
+.banner-fotka{
+    background-image: url(../images/vytrvalost.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -150px;
+    height: calc(100vh - 150px);
+}
+.banner-darker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: calc(100vh - 150px);
+}
+.banner-darker h1{
+    margin: 0;
+    font-size: 60px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.info{
+    display: flex;
+    padding: 2em 5em;
+    background-color: #000;
+    color: #fff;
+}
+.lava{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.lava h2{
+    font-size: 2em;
+    margin: 0 0 0.5em 0;
+}
+.lava p{
+    margin: 0;
+}
+.prava{
+    text-align: center;
+    flex: 1;
+}
+.prava img{
+    max-height: 175px;
+    background-color: rgb(39, 39, 39);
+    box-shadow: 0px 0px 20px rgb(100, 100, 100);
+    padding: 2em;
+    border-radius: 15px;
+}
+
+.typy{
+    padding: 2em 5em;
+}
+.typy h2{
+    font-size: 2em;
+}
+
+.trening{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 100px;
+    padding: 20px 100px;
+    color: #fff;
+    background-color: #000;
+}
+.trening h1{
+    font-size: 35px;
+}
+
+footer{
+    text-align: center;
+}
+footer h4{
+    margin: 0;
+    padding: 10px 0;
+}
+
+@media(max-width: 600px){ 
+    .banner-fotka{
+        background-position-x: 65%;
+    }
+    .banner-darker h1{
+        font-size: 50px;
+    }
+    
+    .info{
+        flex-direction: column;
+        padding: 2em 1.5em;
+        text-align: center;
+        gap: 3em;
+    }
+    
+    .typy{
+        padding: 1em 1.5em;
+        text-align: center;
+    }
+
+    .trening{
+        flex-direction: column;
+        padding: 0 0 20px 0;
+        gap: 0;
+    }
+    .trening ul{
+        padding-left: 30px;
+        margin-top: 0;
+    }
+}
