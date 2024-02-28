@@ -69,10 +69,10 @@ ul li a{
     font-weight: bold;
     color: white;
 }
-nav ul li.download{
+nav ul li.downloadl{
     padding: 0;
 }
-nav ul li.download a{
+nav ul li.downloadl a{
     text-decoration: none;
     font-weight: bold;
     border-radius: 20px;
