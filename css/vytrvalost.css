@@ -2,7 +2,7 @@
     background-image: url(../images/vytrvalost.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -150px;
+    background-position-y: -160px;
     height: calc(100vh - 150px);
 }
 .banner-darker{
