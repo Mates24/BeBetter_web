@@ -2,6 +2,7 @@
     background-image: url(../images/dynamika.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: -100px;
     height: calc(100vh - 150px);
 }
 .banner-darker{
@@ -83,6 +84,7 @@ footer h4{
 @media(max-width: 600px){
     .banner-fotka{
         background-position-x: 50%;
+        background-position-y: 0;
     }
     .banner-darker h1{
         font-size: 50px;
